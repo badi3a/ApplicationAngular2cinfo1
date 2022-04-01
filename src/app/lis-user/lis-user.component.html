@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-md-6 col-xl-3" *ngFor="let user of listUser">
+        <div class="card m-b-30">
+            <div class="card-body row">
+                <div class="col-6">
+                    <a href=""><img src="{{user.picture}}" alt="" class="img-fluid rounded-circle w-60"></a>
+                </div>
+                <div class="col-6 card-title align-self-center mb-0">
+                    <h5>{{user.name}}</h5>
+                    <p class="m-0">{{user.job}}</p>
+                </div>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><i class="fa fa-envelope float-right"></i>Email : <a href="#">
+                  {{user.email}}</a></li>
+                <li class="list-group-item"><i class="fa fa-phone float-right"></i>Phone : {{user.phone}}</li>
+            </ul>
+            <div class="card-body" >
+                    <button class="btn btn-sm btn-danger" (click)="delete(user)">
+                      delete
+                    </button>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -9,6 +9,7 @@ import {Product} from "../model/product";
 export class ListProductComponent implements OnInit {
   public titleApp: string;
   public listProduct:Product[];
+  priceMax: number = 400;
   constructor() {
   }
   ngOnInit(): void {
@@ -37,6 +38,20 @@ export class ListProductComponent implements OnInit {
         description: 'test description'}
     ]
   }
+  incrementLike(p:Product): void{
+    let i= this.listProduct.indexOf(p);
+    if(i!=-1){
+      this.listProduct[i].like++;
+    }
+  }
+
+    buyProduct(p:Product): void {
+      let i = this.listProduct.indexOf(p);
+      if (i != -1) {
+        this.listProduct[i].quantity--;
+      }
+    }
+
 
 
 }

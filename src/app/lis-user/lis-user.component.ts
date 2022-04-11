@@ -44,4 +44,7 @@ export class LisUserComponent implements OnInit {
       this.listUser.splice(i,1)
     }
   }
+  clacul(){
+    //for listUser , job, Teacher
+  }
 }

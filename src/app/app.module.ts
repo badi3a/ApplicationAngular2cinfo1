@@ -8,6 +8,8 @@ import { ListProductComponent } from './list-product/list-product.component';
 import {FormsModule} from "@angular/forms";
 import { LisUserComponent } from './lis-user/lis-user.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import {CalculService} from "./services/calcul.service";
+import { FormProductComponent } from './form-product/form-product.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     HeaderComponent,
     ListProductComponent,
     LisUserComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    FormProductComponent
   ],
   imports: [
     BrowserModule,

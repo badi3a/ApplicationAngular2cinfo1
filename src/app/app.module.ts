@@ -10,6 +10,7 @@ import { LisUserComponent } from './lis-user/lis-user.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import {CalculService} from "./services/calcul.service";
 import { FormProductComponent } from './form-product/form-product.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormProductComponent } from './form-product/form-product.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

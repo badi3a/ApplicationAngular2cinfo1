@@ -13,9 +13,6 @@ export class FormProductComponent implements OnInit {
   ngOnInit(): void {
   }
   save(object:any){
-    console.log(object)
-    this.productService.list.push(object);
-
+    //this.productService.list.push(object);
   }
-
 }

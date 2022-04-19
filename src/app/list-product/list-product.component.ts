@@ -19,8 +19,10 @@ export class ListProductComponent implements OnInit {
   }
   ngOnInit(): void {
     this.titleApp= 'First Angular App';
-    this.productService.getAllProducts().subscribe(
-      (data:Product[])=>this.listProduct=data)
+    //callBack
+     this.productService.getAllProducts().subscribe(
+       (data:Product[])=>{this.listProduct=data}
+     );
   }
   incrementLike(p:Product): void{
     let i= this.listProduct.indexOf(p);
@@ -37,5 +39,16 @@ export class ListProductComponent implements OnInit {
   getStatProduct(){
     this.alertStock= this.calculService.
     getStat(this.listProduct, 'quantity',0)
+  }
+  delete(p: Product){
+    this.productService.deleteProduct(p.id).subscribe(
+      ()=>{
+        let i= this.listProduct.indexOf(p)
+        this.listProduct.splice(i,1)}
+       //this.productService.getAllProducts().subscribe(
+      //(data:Product[])=>{this.listProduct=data}
+       //)}
+      //refrech component with routing
+    )
   }
 }

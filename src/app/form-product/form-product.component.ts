@@ -14,5 +14,6 @@ export class FormProductComponent implements OnInit {
   }
   save(object:any){
     //this.productService.list.push(object);
+    this.productService.addProduct(object).subscribe();
   }
 }
